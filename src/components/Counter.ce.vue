@@ -20,12 +20,17 @@ const onDecrement = () => {
 </script>
 
 <template>
-  <div class="flex justify-between">
+  <div class="flex justify-center mx-auto mb-4">
     <btn @click="onDecrement">{{ t(messagesKeys.DECREMENT) }}</btn>
 
-    <metrics class="px-2" />
+    <metrics class="px-4" />
 
     <btn @click="onIncrement">{{ t(messagesKeys.INCREMENT) }}</btn>
   </div>
 
 </template>
+
+<style>
+@import url("../style.css");
+
+</style>

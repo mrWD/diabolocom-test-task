@@ -8,11 +8,11 @@ import Reset from './components/Reset.ce.vue'
 
 <template>
   <div class="flex flex-col items-center">
-    <LocalePicker class="mb-2" />
+    <LocalePicker />
 
-    <Counter class="mb-2" />
+    <Counter />
 
-    <Reset class="mb-2" />
+    <Reset />
 
     <Metrics />
   </div>

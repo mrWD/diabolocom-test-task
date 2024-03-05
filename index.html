@@ -5,9 +5,45 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + Vue + TS</title>
+
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100vh;
+        padding: 1rem;
+      }
+
+      .cell {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 320px;
+        width: 50%;
+      }
+    </style>
   </head>
+
   <body>
-    <div id="app"></div>
+    <div class="container">
+      <div class="cell">
+        <div id="app"></div>
+      </div>
+
+      <div class="cell">
+        <div class="flex flex-col items-center">
+          <locale-picker-widget></locale-picker-widget>
+
+          <counter-widget></counter-widget>
+
+          <reset-widget></reset-widget>
+
+          <metrics-widget></metrics-widget>
+        </div>
+      </div>
+    </div>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

@@ -16,6 +16,17 @@ const handleReset = () => {
 </script>
 
 <template>
-  <btn :variant="btnTypes.DANGER" @click="handleReset">{{ t(messagesKeys.RESET) }}</btn>
+  <btn
+    class="mb-4"
+    :variant="btnTypes.DANGER"
+    @click="handleReset"
+  >
+    {{ t(messagesKeys.RESET) }}
+  </btn>
 
 </template>
+
+<style>
+@import url("../style.css");
+
+</style>
