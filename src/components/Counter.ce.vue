@@ -21,11 +21,11 @@ const onDecrement = () => {
 
 <template>
   <div class="flex justify-center mx-auto mb-4">
-    <btn @click="onDecrement">{{ t(messagesKeys.DECREMENT) }}</btn>
+    <Btn @click="onDecrement">{{ t(messagesKeys.DECREMENT) }}</Btn>
 
-    <metrics class="px-4" />
+    <Metrics class="px-4" />
 
-    <btn @click="onIncrement">{{ t(messagesKeys.INCREMENT) }}</btn>
+    <Btn @click="onIncrement">{{ t(messagesKeys.INCREMENT) }}</Btn>
   </div>
 
 </template>

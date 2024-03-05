@@ -16,13 +16,13 @@ const handleReset = () => {
 </script>
 
 <template>
-  <btn
+  <Btn
     class="mb-4"
     :variant="btnTypes.DANGER"
     @click="handleReset"
   >
     {{ t(messagesKeys.RESET) }}
-  </btn>
+  </Btn>
 
 </template>
 
