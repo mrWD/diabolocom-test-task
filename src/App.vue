@@ -1,20 +1,20 @@
 <script setup lang="ts">
-import Counter from './components/Counter.vue'
-import LocalePicker from './components/LocalePicker.vue'
-import Metrics from './components/Metrics.vue'
-import Reset from './components/Reset.vue'
+import Counter from './components/Counter.ce.vue'
+import LocalePicker from './components/LocalePicker.ce.vue'
+import Metrics from './components/Metrics.ce.vue'
+import Reset from './components/Reset.ce.vue'
 
 </script>
 
 <template>
   <div class="flex flex-col items-center">
-    <locale-picker class="mb-2" />
+    <LocalePicker class="mb-2" />
 
-    <counter class="mb-2" />
+    <Counter class="mb-2" />
 
-    <reset class="mb-2" />
+    <Reset class="mb-2" />
 
-    <metrics />
+    <Metrics />
   </div>
 
 </template>

@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { watch } from "vue"
-import { useI18n } from 'vue-i18n'
-import { languages, setDefaultLanguage } from "../locales/i18n"
+import { i18n, languages, setDefaultLanguage } from "../locales/i18n"
 
-const { locale } = useI18n()
+const { locale } = i18n.global
 
 watch(locale, newLang => {
   setDefaultLanguage(newLang as languages)
@@ -13,7 +12,7 @@ watch(locale, newLang => {
 
 <template>
   <select
-    v-model="$i18n.locale"
+    v-model="locale"
     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
   >
     <option
