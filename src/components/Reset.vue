@@ -1,0 +1,18 @@
+<script setup lang="ts">
+import { messagesKeys } from '../locales/i18n'
+import { useStore } from '../store'
+
+import Btn from './Btn.vue'
+
+const store = useStore()
+
+const handleReset = () => {
+  store.mutations.reset()
+}
+
+</script>
+
+<template>
+  <Btn @click="handleReset">{{ $t(messagesKeys.RESET) }}</Btn>
+
+</template>
