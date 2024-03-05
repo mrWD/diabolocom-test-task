@@ -3,6 +3,7 @@ import { useStore } from '../store'
 import { messagesKeys } from '../locales/i18n'
 
 import Btn from './Btn.vue'
+import Metrics from './Metrics.vue';
 
 const store = useStore()
 
@@ -17,8 +18,12 @@ const onDecrement = () => {
 </script>
 
 <template>
-    <Btn class="mr-10" @click="onDecrement">{{ $t(messagesKeys.DECREMENT) }}</Btn>
+  <div class="flex justify-between">
+    <btn @click="onDecrement">{{ $t(messagesKeys.DECREMENT) }}</btn>
 
-    <Btn @click="onIncrement">{{ $t(messagesKeys.INCREMENT) }}</Btn>
+    <metrics class="px-2" />
+
+    <btn @click="onIncrement">{{ $t(messagesKeys.INCREMENT) }}</btn>
+  </div>
 
 </template>

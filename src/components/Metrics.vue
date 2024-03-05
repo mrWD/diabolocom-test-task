@@ -7,8 +7,10 @@ const store = useStore()
 </script>
 
 <template>
-  <div>
-    <span>{{ $t(messagesKeys.COUNTER) }}: {{ store.getters.count() }}</span>
+  <div class="flex flex-col items-center">
+    <span>{{ $t(messagesKeys.COUNTER) }}</span>
+
+    <span>{{ store.getters.count() }}</span>
   </div>
 
 </template>

@@ -2,7 +2,7 @@
 import { messagesKeys } from '../locales/i18n'
 import { useStore } from '../store'
 
-import Btn from './Btn.vue'
+import Btn, { btnTypes } from './Btn.vue'
 
 const store = useStore()
 
@@ -13,6 +13,6 @@ const handleReset = () => {
 </script>
 
 <template>
-  <Btn @click="handleReset">{{ $t(messagesKeys.RESET) }}</Btn>
+  <btn :variant="btnTypes.DANGER" @click="handleReset">{{ $t(messagesKeys.RESET) }}</btn>
 
 </template>

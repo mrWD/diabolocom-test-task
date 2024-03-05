@@ -7,12 +7,14 @@ import Reset from './components/Reset.vue'
 </script>
 
 <template>
-  <LocalePicker />
+  <div class="flex flex-col items-center">
+    <locale-picker class="mb-2" />
 
-  <Counter />
+    <counter class="mb-2" />
 
-  <Metrics />
+    <reset class="mb-2" />
 
-  <Reset />
+    <metrics />
+  </div>
 
 </template>
