@@ -11,7 +11,9 @@ const mutations = {
     state.count++
   },
   decrement() {
-    state.count--
+    if (state.count > 0) {
+      state.count--
+    }
   },
   reset() {
     state.count = 0
