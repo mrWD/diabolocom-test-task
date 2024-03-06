@@ -1,23 +1,22 @@
 <script setup lang="ts">
 import { messagesKeys } from '../locales/i18n'
-import { useStore } from '../store'
 
 import Btn, { btnTypes } from './Btn.ce.vue'
 import { i18n } from '../locales/i18n'
 
 const { t } = i18n.global
 
-const store = useStore()
+const model = defineModel({ default: 0 })
 
 const handleReset = () => {
-  store.mutations.reset()
+  model.value = 0
 }
 
 </script>
 
 <template>
   <Btn
-    class="mb-4"
+    :disabled="model === 0"
     :variant="btnTypes.DANGER"
     @click="handleReset"
   >

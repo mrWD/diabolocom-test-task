@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useStore } from '../store'
 import { i18n, messagesKeys } from '../locales/i18n'
 
 import Btn from './Btn.ce.vue'
@@ -7,25 +6,32 @@ import Metrics from './Metrics.ce.vue'
 
 const { t } = i18n.global
 
-const store = useStore()
+const model = defineModel({ default: 0 })
 
-const onIncrement = () => {
-  store.mutations.increment()
+const handleIncrement = () => {
+  model.value++
 }
 
-const onDecrement = () => {
-  store.mutations.decrement()
+const handleDecrement = () => {
+  if (model.value > 0) {
+    model.value--
+  }
 }
 
 </script>
 
 <template>
-  <div class="flex justify-center mx-auto mb-4">
-    <Btn @click="onDecrement">{{ t(messagesKeys.DECREMENT) }}</Btn>
+  <div class="flex justify-center mx-auto">
+    <Btn
+      :disabled="model === 0"
+      @click="handleDecrement"
+    >
+      {{ t(messagesKeys.DECREMENT) }}
+    </Btn>
 
-    <Metrics class="px-4" />
+    <Metrics :count="model" class="px-4" />
 
-    <Btn @click="onIncrement">{{ t(messagesKeys.INCREMENT) }}</Btn>
+    <Btn @click="handleIncrement">{{ t(messagesKeys.INCREMENT) }}</Btn>
   </div>
 
 </template>

@@ -20,15 +20,15 @@ export enum btnTypes {
 }
 
 const mapVariantToClasses = {
-  [btnTypes.DEFAULT]: 'hover:bg-blue-500 text-blue-700 hover:text-white border-blue-500',
-  [btnTypes.DANGER]: 'hover:bg-red-500 text-red-700 hover:text-white border-red-500',
+  [btnTypes.DEFAULT]: 'enabled:hover:bg-blue-500 enabled:text-blue-700 enabled:hover:text-white enabled:border-blue-500',
+  [btnTypes.DANGER]: 'enabled:hover:bg-red-500 enabled:text-red-700 enabled:hover:text-white enabled:border-red-500',
 }
 
 </script>
 
 <template>
   <button
-    :class="['bg-transparent font-semibold py-2 px-4 border hover:border-transparent rounded', mapVariantToClasses[variant]]"
+    :class="['bg-transparent font-semibold py-2 px-4 border rounded enabled:hover:border-transparent disabled:cursor-not-allowed', mapVariantToClasses[variant]]"
     @click="handleClick"
   >
     <slot></slot>
