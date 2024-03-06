@@ -1,18 +1,40 @@
-# Vue 3 + TypeScript + Vite
+# Diabolocom Test Task
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Vue Application
 
-## Recommended IDE Setup
+### Installing dependencies
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+1. Pull the repository:
+   - with SSH: `git clone https://github.com/mrWD/diabolocom-test-task-temp.git`
+   - with HTTPS: `git clone https://github.com/mrWD/diabolocom-test-task-temp.git`
+2. Run `npm ci` from the root folder.
 
-## Type Support For `.vue` Imports in TS
+### Running the application
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+1. Run `npm run dev` from the root folder.
+2. Open `http://localhost:5173` in your browser.
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+### Running the tests
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+1. Run `npm run test` from the root folder.
+
+### Building the application and use it as a web components
+
+1. Run `npm run build` from the root folder.
+2. Import `dist/diabolocom-web-components.umd.cjs` into your project and use it as a web component.
+
+## Web Components integration
+
+### Using the web components
+
+1. Add `<script src="dist/diabolocom-web-components.umd.cjs"></script>` to your HTML file.
+
+### Available web components
+
+1. `<locale-picker-widget>` for the locale picker widget
+2. `<counter-widget>` for the counter. Attributes:
+   - `namespace`: string - the namespace of the counter's state
+3. `<metrics-widget>` for the metrics widget. Attributes:
+   - `namespace`: string - the namespace of the counter's state
+4. `<reset-widget>` for the reset widget. Attributes:
+   - `namespace`: string - the namespace of the counter's state
