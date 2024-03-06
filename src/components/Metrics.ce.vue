@@ -19,7 +19,7 @@ const { namespace } = defineProps({
   <div class="flex flex-col items-center">
     <span>{{ t(messagesKeys.COUNTER) }}</span>
 
-    <span>{{ store.getters.count(namespace) }}</span>
+    <span data-testid="counter">{{ store.getters.count(namespace) }}</span>
   </div>
 
 </template>

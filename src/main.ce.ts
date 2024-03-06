@@ -1,9 +1,9 @@
+import { defineCustomElement } from 'vue'
+
 import Counter from './components/Counter.ce.vue'
 import LocalePicker from './components/LocalePicker.ce.vue'
 import Metrics from './components/Metrics.ce.vue'
 import Reset from './components/Reset.ce.vue'
-
-import { defineCustomElement } from 'vue'
 
 export const defineCustomElements = (components: Record<string, object>) => {
   for (const componentName in components) {

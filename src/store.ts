@@ -4,11 +4,11 @@ const initialState: Record<string, number> = {
   count: 0,
 }
 
-const state = reactive(initialState)
+export const state = reactive(initialState)
 
-const getNamespacedKey = (namespace: string) => `count${namespace}`
+export const getNamespacedKey = (namespace: string) => `count${namespace}`
 
-const mutations = {
+export const mutations = {
   increment(namespace: string) {
     const key = getNamespacedKey(namespace)
 
@@ -38,7 +38,7 @@ const mutations = {
   },
 }
 
-const getters = {
+export const getters = {
   count: (namespace: string) => state[getNamespacedKey(namespace)] ?? 0,
 }
 
