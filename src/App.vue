@@ -10,7 +10,7 @@ const count = ref(0)
 </script>
 
 <template>
-  <div class="flex flex-col items-center">
+  <div class="flex flex-col justify-center items-center h-screen">
     <LocalePicker class="mb-4" />
 
     <Counter class="mb-4" />
