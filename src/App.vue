@@ -1,11 +1,8 @@
 <script setup lang="ts">
-import { ref } from 'vue';
 import Counter from './components/Counter.ce.vue'
 import LocalePicker from './components/LocalePicker.ce.vue'
 import Metrics from './components/Metrics.ce.vue'
 import Reset from './components/Reset.ce.vue'
-
-const count = ref(0)
 
 </script>
 
@@ -15,9 +12,9 @@ const count = ref(0)
 
     <Counter class="mb-4" />
 
-    <Reset class="mb-4" v-model="count" />
+    <Reset class="mb-4" />
 
-    <Metrics :count="count" />
+    <Metrics />
   </div>
 
 </template>
