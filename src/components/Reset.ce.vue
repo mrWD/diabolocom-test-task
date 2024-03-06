@@ -1,24 +1,26 @@
 <script setup lang="ts">
-import { messagesKeys } from '../locales/i18n'
-
+import { messagesKeys, i18n } from '../locales/i18n'
+import { useStore } from '../store';
 import Btn, { btnTypes } from './Btn.ce.vue'
-import { i18n } from '../locales/i18n'
 
 const { t } = i18n.global
 
-const model = defineModel({ default: 0 })
+const store = useStore()
 
-const handleReset = () => {
-  model.value = 0
-}
+const { namespace } = defineProps({
+  namespace: {
+    type: String,
+    default: '',
+  },
+})
 
 </script>
 
 <template>
   <Btn
-    :disabled="model === 0"
+    :disabled="store.getters.count(namespace) === 0"
     :variant="btnTypes.DANGER"
-    @click="handleReset"
+    @click="store.mutations.reset(namespace)"
   >
     {{ t(messagesKeys.RESET) }}
   </Btn>

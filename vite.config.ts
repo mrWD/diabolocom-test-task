@@ -16,8 +16,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: './src/main.ce.ts',
-      name: 'simple-sample',
-      fileName: 'simple-sample'
+      name: 'diabolocom-web-components',
+      fileName: 'diabolocom-web-components',
     }
   },
   define: {

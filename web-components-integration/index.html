@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      height: 100vh;
+      padding: 1rem;
+    }
+
+    .cell {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-width: 320px;
+      width: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="cell">
+      <locale-picker-widget></locale-picker-widget>
+
+      <counter-widget namespace="1"></counter-widget>
+
+      <reset-widget namespace="1"></reset-widget>
+
+      <metrics-widget namespace="1"></metrics-widget>
+    </div>
+
+    <div class="cell">
+      <locale-picker-widget></locale-picker-widget>
+
+      <counter-widget namespace="2"></counter-widget>
+
+      <reset-widget namespace="2"></reset-widget>
+
+      <metrics-widget namespace="2"></metrics-widget>
+    </div>
+  </div>
+
+  <script>
+    let counter = 0
+  </script>
+
+  <script src="../dist/diabolocom-web-components.umd.cjs"></script>
+</body>
+</html>

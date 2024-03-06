@@ -28,7 +28,10 @@ const mapVariantToClasses = {
 
 <template>
   <button
-    :class="['bg-transparent font-semibold py-2 px-4 border rounded enabled:hover:border-transparent disabled:cursor-not-allowed', mapVariantToClasses[variant]]"
+    :class="[
+      'bg-transparent font-semibold py-2 px-4 border rounded enabled:hover:border-transparent disabled:cursor-not-allowed',
+      mapVariantToClasses[variant],
+    ]"
     @click="handleClick"
   >
     <slot></slot>

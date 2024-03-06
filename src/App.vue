@@ -13,7 +13,7 @@ const count = ref(0)
   <div class="flex flex-col items-center">
     <LocalePicker class="mb-4" />
 
-    <Counter class="mb-4" v-model="count" />
+    <Counter class="mb-4" />
 
     <Reset class="mb-4" v-model="count" />
 
