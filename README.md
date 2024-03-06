@@ -38,3 +38,7 @@
    - `namespace`: string - the namespace of the counter's state
 4. `<reset-widget>` for the reset widget. Attributes:
    - `namespace`: string - the namespace of the counter's state
+
+### Example of usage
+
+You can find an example of usage in the `web-components-integration/index.html` file.
