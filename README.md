@@ -2,17 +2,19 @@
 
 ## Vue Application
 
-### Installing dependencies
-
-1. Pull the repository:
-   - with SSH: `git clone https://github.com/mrWD/diabolocom-test-task-temp.git`
-   - with HTTPS: `git clone https://github.com/mrWD/diabolocom-test-task-temp.git`
-2. Run `npm ci` from the root folder.
-
 ### Running the application
 
-1. Run `npm run dev` from the root folder.
-2. Open `http://localhost:5173` in your browser.
+#### Running without docker
+
+1. Run `npm ci` from the root folder.
+2. Run `npm run dev` from the root folder.
+3. Open `http://localhost:5173` in your browser.
+
+#### Running with docker
+
+1. Run `docker build -t diabolocom-image .` from the root folder.
+2. Run `docker run --rm --name diabolocom -p 5173:5173 -d diabolocom-image`.
+3. Open `http://localhost:5173` in your browser.
 
 ### Running the tests
 
