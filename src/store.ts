@@ -39,7 +39,7 @@ const mutations = {
 }
 
 const getters = {
-  count: (namespace: string) => state[getNamespacedKey(namespace)],
+  count: (namespace: string) => state[getNamespacedKey(namespace)] ?? 0,
 }
 
 const resetState = () => {
